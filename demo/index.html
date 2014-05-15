@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Pong game. Demo. JS canvas.</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="HandheldFriendly" content="True">
+
+    <link rel="stylesheet" media="all" href="../src/css/normalize.css">
+    <link rel="stylesheet" media="all" href="../src/css/style.css">
+  </head>
+  <body>
+    <canvas id="pong">
+      Your browser does not support the HTML 5 Canvas.
+    </canvas>
+
+    <audio preload="auto" id="hit">
+      <source src="../src/sound/hit.mp3" type="audio/mpeg">
+      <source src="../src/sound/hit.wav" type="audio/wav">
+    </audio>
+
+    <script src="../bower_components/zepto/zepto.min.js"></script>
+    <script src="../src/js/main.js"></script>
+
+    <script>
+      (function(global) {
+        global.onload = function() {
+          (new PongGame('pong')).start();
+        };
+      }(this));
+    </script>
+  </body>
+</html>
